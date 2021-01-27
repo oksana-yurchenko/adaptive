@@ -1,0 +1,274 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+.header-inner {
+	padding: 80px 0 41px 0;
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.header-logo {
+	margin-bottom: 46px;
+}
+
+/* Navigation */
+
+.nav {
+	width: 100%;
+}
+
+.nav .nav-list {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+}
+
+.nav-item {
+	margin-right: 80px;
+}
+
+.nav-item:last-child {
+	margin-right: 0;
+}
+
+.nav-item-link {
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 24px;
+	color: #000;
+}
+
+.burger-icon-item {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+	.header-inner {
+		width: 919px;
+		margin: 0 auto;
+		position: relative;
+		padding: 48px 0 26px 0;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.header-inner::after {
+		content: "";
+		display: block;
+		width: 48px;
+    	height: 31px;
+    	margin-left: auto;
+		visibility: hidden;
+	}
+
+	.header svg {
+		width: 80px;
+		height: 48px;
+	}
+
+	.header.menu-open path {
+		fill: #fff;
+	}
+
+	.header-logo {
+		margin-bottom: 0px;
+	}
+
+	.header.menu-open {
+		background: #000;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 316px;
+
+	}
+
+	.header.menu-open .header-inner {
+		position: relative;
+	}
+
+	.header.menu-open .nav {
+		display: block;
+		position: absolute;
+		top: 176px;
+		left: 0;
+	}
+
+	.header.menu-open .nav-item-link {
+		color: #fff;
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+
+	.header.menu-open .burger-icon-item,
+	.header.menu-open .burger-icon-item:after {
+		background: #fff;
+	}
+
+	.header.menu-open .burger-icon {
+		width: 48px;
+		height: 48px;
+		transform: rotate(45deg);
+	}
+
+	.header.menu-open .burger-icon-item:after{
+		transform: rotate(90deg);
+		bottom: 0;
+		left: 0;
+	}
+
+	.header.menu-open .burger-icon-item:before {
+		content: none;
+	}
+
+	/*Burger icon*/
+	.burger-icon {
+		width: 48px;
+    	height: 31px;
+		border: none;
+		background: none;
+		margin-right: auto;
+		/*position: absolute;
+	    left: 0;
+	    top: 70px;*/
+	    outline: none;
+	}
+
+	.burger-icon-item {
+		display: block;
+		width: 48px;
+		height: 5px;
+		background: #000;
+		position: relative;
+		cursor: pointer;
+		display: block;
+	}
+
+	.burger-icon-item:before {
+		content: "";
+		display: block;
+		width: 48px;
+		height: 5px;
+		background: #000;
+		position: absolute;
+		top: -13px;
+		left: 0;
+	}
+
+	.burger-icon-item:after {
+		content: "";
+		display: block;
+		width: 48px;
+		height: 5px;
+		background: #000;
+		position: absolute;
+		bottom: -13px;
+		left: 0;
+	}
+
+	/*Как оказалось если не сделать для nav display: none; то оно схлопывается без высоты, но занимает ширину, и тогда 
+	горизонтальное распределение элементов на флексах не работает*/
+
+	.nav {
+		display: none;
+	}
+
+	/*.nav .nav-list {
+		display: none;
+	}*/
+
+	.menu-open .nav .nav-list {
+		display: flex;
+	}
+
+}
+
+@media only screen and (max-device-width: 375px) and (orientation:portrait) {
+
+	.header {
+		width: 375px;
+		height: 187px;
+		background: #000 url("../img/top-banner-header.jpg") no-repeat;
+		background-size: cover;
+	}
+
+	.header-inner {
+		width: 335px;
+		margin: 0 auto;
+		position: relative;
+		padding: 23px 0 133px 0;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.header .header-logo,
+	.header .nav {
+		display: none;
+	}
+
+	.burger-icon-item,
+	.burger-icon-item::before,
+	.burger-icon-item::after {
+		background: #fff;
+	}
+
+	.header.menu-open {
+		background: #000;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 375px;
+		min-height: 332px;
+
+	}
+
+	.header.menu-open .header-inner::after{
+		display: none;
+	}
+
+	.header.menu-open .header-logo {
+		display: block;
+	}
+
+	.header.menu-open .nav {
+		display: block;
+		position: absolute;
+		top: 120px;
+		left: 0;
+	}
+
+	.header.menu-open .nav-list {
+		flex-direction: column;
+	}
+
+	.nav-item {
+		margin-right: 0;
+		margin-bottom: 48px;
+	} 
+
+	.nav-item:last-child {
+		margin-right: 0;
+		margin-bottom: 44px;
+	} 
+
+	.header.menu-open .nav-item-link {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+}
+

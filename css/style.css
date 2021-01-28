@@ -197,10 +197,10 @@ body {
 
 }
 
-@media screen and (max-width : 375px) {
+@media screen and (max-width: 375px) {
 
 	.header {
-		width: 373px;
+		width: 100%;
 		height: 187px;
 		background: #000 url("../img/top-banner-header.jpg") no-repeat;
 		background-size: cover;
@@ -210,9 +210,8 @@ body {
 		width: 335px;
 		margin: 0 auto;
 		position: relative;
-		padding: 23px 0 133px 0;
+		padding: 24px 0 248px 0;
 		flex-direction: row;
-		justify-content: space-between;
 	}
 
 	.header .header-logo,
@@ -236,12 +235,48 @@ body {
 
 	}
 
+	.header.menu-open .header-inner {
+		justify-content: space-between;
+	}
+
+	.header svg {
+		width: 80px;
+		height: 48px;
+	}
+
+	.header.menu-open path {
+		fill: #fff;
+	}
+
 	.header.menu-open .header-inner::after{
 		display: none;
 	}
 
 	.header.menu-open .header-logo {
 		display: block;
+		margin-bottom: 0;
+	}
+
+
+	.header.menu-open .burger-icon-item,
+	.header.menu-open .burger-icon-item:after {
+		background: #fff;
+	}
+
+	.header.menu-open .burger-icon {
+		width: 48px;
+		height: 48px;
+		transform: rotate(45deg);
+	}
+
+	.header.menu-open .burger-icon-item:after{
+		transform: rotate(90deg);
+		bottom: 0;
+		left: 0;
+	}
+
+	.header.menu-open .burger-icon-item:before {
+		content: none;
 	}
 
 	.header.menu-open .nav {
@@ -268,6 +303,52 @@ body {
 	.header.menu-open .nav-item-link {
 		font-size: 20px;
 		line-height: 24px;
+		color: #fff;
+	}
+
+		/*Burger icon*/
+	.burger-icon {
+		width: 48px;
+    	height: 31px;
+		border: none;
+		background: none;
+		margin-right: auto;
+		/*position: absolute;
+	    left: 0;
+	    top: 70px;*/
+	    outline: none;
+	}
+
+	.burger-icon-item {
+		display: block;
+		width: 48px;
+		height: 5px;
+		background: #fff;
+		position: relative;
+		cursor: pointer;
+		display: block;
+	}
+
+	.burger-icon-item:before {
+		content: "";
+		display: block;
+		width: 48px;
+		height: 5px;
+		background: #fff;
+		position: absolute;
+		top: -13px;
+		left: 0;
+	}
+
+	.burger-icon-item:after {
+		content: "";
+		display: block;
+		width: 48px;
+		height: 5px;
+		background: #fff;
+		position: absolute;
+		bottom: -13px;
+		left: 0;
 	}
 
 }

@@ -53,7 +53,7 @@ body {
 	display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 376px) and (max-width: 1024px) {
 
 	.header-inner {
 		width: 919px;
@@ -197,10 +197,10 @@ body {
 
 }
 
-@media only screen and (max-device-width: 375px) and (orientation:portrait) {
+@media screen and (max-width : 375px) {
 
 	.header {
-		width: 375px;
+		width: 373px;
 		height: 187px;
 		background: #000 url("../img/top-banner-header.jpg") no-repeat;
 		background-size: cover;
@@ -255,12 +255,12 @@ body {
 		flex-direction: column;
 	}
 
-	.nav-item {
+	.header.menu-open .nav-item {
 		margin-right: 0;
 		margin-bottom: 48px;
 	} 
 
-	.nav-item:last-child {
+	.header.menu-open .nav-item:last-child {
 		margin-right: 0;
 		margin-bottom: 44px;
 	} 

@@ -8,6 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     </head>
     <body>
 	    <header class="header" id="header">
@@ -31,7 +33,26 @@
 	    </header>
 	    <main>
 		    <div class="banner-section">
-		    	<img src="img/top-banner-header.jpg" width="100%">
+		    	<div class="carousel">
+			    	<div><img src="img/photo03.png" width="100%"></div>
+			    	<div><img src="img/photo01.png" width="100%"></div>
+	          		<div><img src="img/photo02.png" width="100%"></div>
+          		</div>
+          		<p class="info-section">Suspendisse potenti. Curabitur in leo non odio hendrerit semper. Morbi id tempor eros. Donec viverra tempor congue. Suspendisse quis felis ultricies, egestas tellus non, semper est.Donec congue lorem odio, eu ornare nisl malesuada tincidunt. Nullam ac leo est. Donec varius neque vel ex consectetur aliquet. Aliquam venenatis vel tellus non tincidunt. In viverra tellus ut libero dapibus ullamcorper. Donec non feugiat massa.</p>
+		    </div>
+		    <div class="content-section history-section">
+		    	<h2 class="section-title">History</h2>
+		    	<ul class="history-content">
+		    		<li class="history-item"><p class="history-item-text"><span class="decor-year">1890</span> Fusce rhoncus at sapien at sollicitudin. Quisque semper sollicitudin libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi consequat, non sagittis purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo tincidunt id. Nulla facilisi.</p></li>
+		    		<li class="history-item"><p class="history-item-text"><span class="decor-year">1920</span> Aliquam erat volutpat. Curabitur et accumsan odio, eget scelerisque risus. Suspendisse ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet purus odio. Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex pulvinar aliquam. Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a placerat purus justo eget magna. Mauris neque nisi, pharetra ac posuere nec, vehicula non lorem.</p></li>
+		    	</ul>
+		    </div>
+		    <div class="content-section">
+		    	<h2 class="section-title">Contact us</h2>
+		    	<form action="" method="post" class="contact-form">
+		    		<textarea placeholder="type your message here" class="comment-field"></textarea>
+		    		<button class="send-btn">Send</button>
+		    	</form>
 		    </div>
 		</main>
 	    <script>
@@ -41,5 +62,15 @@
 	            header.classList.toggle("menu-open");
 	        }
 	    </script>
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/slick.min.js"></script>
+		<script>
+            $(document).ready(function(){
+              $('.carousel').slick({
+                dots: true
+              });
+            });
+        </script>
     </body>
 </html>

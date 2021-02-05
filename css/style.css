@@ -52,7 +52,7 @@ body {
 .nav-item-link {
 	text-decoration: none;
 	font-size: 0.71em;
-	line-height: 0.86em;
+	line-height: 1.2;
 	color: #000;
 }
 
@@ -124,7 +124,7 @@ body {
 	margin-top: 1.68em;
 	margin-bottom: 3.57em;
 	box-sizing: border-box;
-	padding: 30px;
+	padding: 1.07em;
 	display: flex;
 	justify-content: space-between;
 	border: 1px solid #000;
@@ -211,7 +211,7 @@ body {
 	.history-content {
 		display: flex;
 		flex-direction: column;
-		padding: 32px 0;
+		padding: 1.14em 0;
 	}
 
 	.history-item {
@@ -286,9 +286,6 @@ body {
 		border: none;
 		background: none;
 		margin-right: auto;
-		/*position: absolute;
-	    left: 0;
-	    top: 70px;*/
 	    outline: none;
 	}
 
@@ -331,10 +328,6 @@ body {
 		display: none;
 	}
 
-	/*.nav .nav-list {
-		display: none;
-	}*/
-
 	.menu-open .nav .nav-list {
 		display: flex;
 	}
@@ -344,16 +337,11 @@ body {
 @media screen and (max-width: 375px) {
 
 	.header {
-		min-height: 187px;
-		background: #000;
+		height: 0;
 	}
 
 	.header-inner {
-		width: 100%;
-		margin: 0 auto;
-		position: relative;
 		padding: 0;
-		flex-direction: row;
 	}
 
 	.carousel {
@@ -368,48 +356,53 @@ body {
 	}
 
 	.banner-section {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 0;
 		padding: 0;
 		overflow: hidden;
 	}
 
+	.burger-icon {
+		position: absolute;
+		top: 23px;
+		left: 19px;
+		z-index: 1;
+	}
+
+	.burger-icon-item,
+	.burger-icon-item::before,
+	.burger-icon-item::after {
+		background: #fff;
+	}
+
 	.info-section {
-		font-size: 18px;
-		line-height: 22px;
-		padding: 0 20px;
+		font-size: 0.64em;
+		line-height: 1.3em;
+		padding: 0 1.11em;
 		box-sizing: border-box;
 }
 
 	/* History section */
 
 	.content-section {
-		padding: 0 20px;
+		padding: 0 0.71em;
 		box-sizing: border-box;
 	}
 
-	.history-section {
-		margin-top: 368px;
-	}
-
 	.section-title {
-		font-size: 20px;
-		line-height: 24px;
+		font-size: 0.71em;
+		line-height: 1.2;
 	}
 
 	.history-content {
 		flex-direction: column;
-		padding: 25px 0;
+		padding: 0.89em 0;
 	}
 
 	.history-item {
 		width: 100%;
-		font-size: 16px;
-		line-height: 19px;
-		padding: 20px;
-		margin-bottom: 32px;
+		font-size: 0.57em;
+		line-height: 1.2;
+		padding: 1.25em;
+		margin-bottom: 2em;
 	}
 
 	.history-item:last-child {
@@ -417,16 +410,16 @@ body {
 	}
 
 	.decor-year {
-		font-size: 24px;
-		line-height: 29px;
+		font-size: 1.5em;
+		line-height: 1.2;
 		display: block;
 	}
 
 	/* Contact us Section*/
 
 	.contact-form {
-		margin-top: 32px;
-		margin-bottom: 100px;
+		margin-top: 1.14em;
+		margin-bottom: 3.57em;
 		flex-direction: column;
 		border: none;
 		padding: 0;
@@ -435,42 +428,25 @@ body {
 	.comment-field {
 		width: 100%;
 		height: 150px;
-		box-sizing: border-box;
 		border: 1px solid #000;
-		padding: 20px;
-		margin-bottom: 19px;
+		font-size: 0.64em;
+		line-height: 1.2;
+		padding: 1.11em;
+		margin-bottom: 1.06em;
+		box-sizing: border-box;
 	}
 
 	.send-btn {
 		width: 100%;
-		font-size: 24px;
+		font-size: 0.86em;
 	}
 
 		/* Open-menu section*/
 
 	.header.menu-open {
-		background: #000;
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		left: 0;
 		height: 332px;
-		width: 100%;
-		padding: 24px 20px 0 20px;
+		padding: 0.86em 0.71em 0;
 		box-sizing: border-box;
-	}
-
-	.header.menu-open .header-inner {
-		justify-content: space-between;
-	}
-
-	.header.menu-open svg {
-		width: 80px;
-		height: 48px;
-	}
-
-	.header.menu-open path {
-		fill: #fff;
 	}
 
 	.header.menu-open .header-inner:after{
@@ -486,33 +462,8 @@ body {
 		margin-bottom: 0;
 	}
 
-
-	.header.menu-open .burger-icon-item,
-	.header.menu-open .burger-icon-item:after {
-		background: #fff;
-	}
-
-	.header.menu-open .burger-icon {
-		width: 48px;
-		height: 48px;
-		transform: rotate(45deg);
-	}
-
-	.header.menu-open .burger-icon-item:after{
-		transform: rotate(90deg);
-		bottom: 0;
-		left: 0;
-	}
-
-	.header.menu-open .burger-icon-item:before {
-		content: none;
-	}
-
 	.header.menu-open .nav {
-		display: block;
-		position: absolute;
 		top: 96px;
-		left: 0;
 	}
 
 	.header.menu-open .nav-list {
@@ -521,24 +472,20 @@ body {
 
 	.header.menu-open .nav-item {
 		margin-right: 0;
-		margin-bottom: 48px;
+		margin-bottom: 2.4em;
+		line-height: 1;
+		font-size: 0.71em;
 	} 
 
 	.header.menu-open .nav-item:last-child {
 		margin-right: 0;
-		margin-bottom: 44px;
+		margin-bottom: 2.2em;
 	} 
 
 	.header.menu-open .nav-item-link {
-		font-size: 20px;
-		line-height: 24px;
-		color: #fff;
+		font-size: 1em;
+		line-height: 1;
 	}
-
-	.header.menu-open + main {
-		margin-top: 555px;
-	}
-
 
 }
 

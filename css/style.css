@@ -30,6 +30,11 @@ body {
 	margin-bottom: 1.64em;
 }
 
+.burger-icon,
+.open-burger-icon {
+	display: none;
+}
+
 /* Navigation */
 
 .nav {
@@ -63,6 +68,10 @@ body {
 /* Banner section*/
 
 .carousel {
+	width: 100%;
+}
+
+.carousel img {
 	width: 100%;
 }
 
@@ -155,7 +164,6 @@ body {
 	.header-inner {
 		width: 100%;
 		margin: 0 auto;
-		position: relative;
 		padding: 1.71em;
 		padding-bottom: 0.93em;
 		box-sizing: border-box;
@@ -166,8 +174,8 @@ body {
 	.header-inner::after {
 		content: "";
 		display: block;
-		width: 48px;
-    	height: 31px;
+		width: 54px;
+    	height: 54px;
     	margin-left: auto;
 		visibility: hidden;
 	}
@@ -194,6 +202,23 @@ body {
 		margin-top: 1.2em;
 		margin-bottom: 2.05em;
 		text-align: center;
+	}
+
+	.burger-icon {
+		display: block;
+		margin-right: auto;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+
+	.fa-hamburger {
+		font-size: 4em;
+		color: #000;
+	}
+
+	.open-burger-icon {
+		display: none;
 	}
 
 	/* History section */
@@ -244,6 +269,24 @@ body {
 		position: relative;
 	}
 
+	.header.menu-open .header-inner::after{
+		width: 38.5px;
+		height: 56px;
+	}
+
+	.header.menu-open .burger-icon {
+		display: none;
+	}
+
+	.header.menu-open .open-burger-icon {
+		display: block;
+		font-size: 2em;
+		color: #fff;
+		background: none;
+		border: none;
+		margin-right: auto;
+	}
+
 	.header.menu-open .nav {
 		display: block;
 		position: absolute;
@@ -255,70 +298,6 @@ body {
 		color: #fff;
 		font-size: 24px;
 		line-height: 30px;
-	}
-
-
-	.header.menu-open .burger-icon-item,
-	.header.menu-open .burger-icon-item:after {
-		background: #fff;
-	}
-
-	.header.menu-open .burger-icon {
-		width: 48px;
-		height: 48px;
-		transform: rotate(45deg);
-	}
-
-	.header.menu-open .burger-icon-item:after{
-		transform: rotate(90deg);
-		bottom: 0;
-		left: 0;
-	}
-
-	.header.menu-open .burger-icon-item:before {
-		content: none;
-	}
-
-	/*Burger icon*/
-	.burger-icon {
-		width: 48px;
-    	height: 31px;
-		border: none;
-		background: none;
-		margin-right: auto;
-	    outline: none;
-	}
-
-	.burger-icon-item {
-		display: block;
-		width: 48px;
-		height: 5px;
-		background: #000;
-		position: relative;
-		cursor: pointer;
-		display: block;
-	}
-
-	.burger-icon-item:before {
-		content: "";
-		display: block;
-		width: 48px;
-		height: 5px;
-		background: #000;
-		position: absolute;
-		top: -13px;
-		left: 0;
-	}
-
-	.burger-icon-item:after {
-		content: "";
-		display: block;
-		width: 48px;
-		height: 5px;
-		background: #000;
-		position: absolute;
-		bottom: -13px;
-		left: 0;
 	}
 
 	/*Как оказалось если не сделать для nav display: none; то оно схлопывается без высоты, но занимает ширину, и тогда 
@@ -360,17 +339,16 @@ body {
 		overflow: hidden;
 	}
 
+	.fa-hamburger {
+		font-size: 3em;
+		color: #fff;
+	}
+
 	.burger-icon {
 		position: absolute;
 		top: 23px;
 		left: 19px;
 		z-index: 1;
-	}
-
-	.burger-icon-item,
-	.burger-icon-item::before,
-	.burger-icon-item::after {
-		background: #fff;
 	}
 
 	.info-section {
